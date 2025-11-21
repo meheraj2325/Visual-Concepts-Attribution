@@ -1,0 +1,25 @@
+# Main configuration file
+
+models:
+  - name: "llama-3.2-11b-vision"
+    enabled: true
+  - name: "internvl-2-8b"
+    enabled: false
+
+dataset:
+  path: "./data/processed/vqa_dataset.json"
+  type: "custom_json"
+  
+output:
+  dir: "./outputs"
+  save_intermediate: true
+  formats: ["json", "csv"]
+
+inference:
+  batch_size: 1
+  max_new_tokens: 512
+  temperature: 0.0
+
+logging:
+  level: "INFO"
+  log_file: "./outputs/logs/pipeline.log"
