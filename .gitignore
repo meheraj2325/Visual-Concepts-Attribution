@@ -39,7 +39,6 @@ outputs/*
 !outputs/.gitkeep
 
 # Models
-models/
 *.bin
 *.safetensors
 *.pt
